@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weatherapp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<h1>Weather Master 5k</h1>
+<div class="rForecast"></div>
+<%= yield %>
+<div id="templates">
+  <script type="template" class="forecast">
+    <h3>Weather for {{city}} </h3>
+    <h5>Temperature: {{temp}} </h5>
+  </script>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+</div>
+</body>
+</html>
